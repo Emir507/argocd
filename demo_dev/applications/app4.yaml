@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name     : myapp4
+  name     : emir-pod
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name     : in-cluster
-    namespace: app4
+    namespace: emir-namespace
   source:
     path   : "HelmCharts/MyChart2"
     repoURL: "git@github.com:Emir507/argocd.git"
