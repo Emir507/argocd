@@ -9,7 +9,5 @@ spec:
     project: {{ .Release.Name }}    # Selecting PODS with those Labels
   ports:
     - name      : {{ .Release.Name }}-listener
-      protocol  : TCP
-      port      : 80  # Port on Load Balancer
-      targetPort: 3000  # Port on POD
-  type: LoadBalancer
+      port: 80
+      targetPort: 3000
